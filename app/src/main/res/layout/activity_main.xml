@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/etProceso"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:backgroundTint="@android:color/background_light"
+            android:gravity="bottom|right"
+            android:textSize="70dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/linearLayout3"
+        android:layout_toRightOf="@+id/linearLayout3"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSoma"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/etProceso"
+            android:layout_toRightOf="@+id/btnNove"
+            android:onClick="onClickOperator"
+            android:text="+"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnSubtrai"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnSoma"
+            android:layout_toRightOf="@+id/btnTres"
+            android:onClick="onClickOperator"
+            android:text="-"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnMultiplica"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignBaseline="@+id/btnTres"
+            android:layout_alignBottom="@+id/btnTres"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/btnTres"
+            android:onClick="onClickOperator"
+            android:text="*"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignEnd="@+id/btnMultiplica"
+            android:layout_alignRight="@+id/btnMultiplica"
+            android:layout_below="@+id/btnMultiplica"
+            android:layout_toRightOf="@+id/btnTres"
+            android:onClick="onClickOperator"
+            android:text="/"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/etProceso"
+        android:layout_toRightOf="@+id/linearLayout2"
+        android:layout_toEndOf="@+id/linearLayout2"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/btnNove"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/etProceso"
+            android:layout_toEndOf="@+id/btnOito"
+            android:layout_toRightOf="@+id/btnOito"
+            android:onClick="onClickNumber"
+            android:text="9"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnSeis"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/btnOito"
+            android:layout_toEndOf="@+id/btnCinco"
+            android:layout_toRightOf="@+id/btnCinco"
+            android:onClick="onClickNumber"
+            android:text="6"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnTres"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/btnSeis"
+            android:layout_toEndOf="@+id/btnZero"
+            android:layout_toRightOf="@+id/btnZero"
+            android:onClick="onClickNumber"
+            android:text="3"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnIgual"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/btnTres"
+            android:layout_toEndOf="@+id/btnDois"
+            android:layout_toRightOf="@+id/btnDois"
+            android:onClick="onClickResultado"
+            android:text="="
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btnSete"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignBaseline="@+id/btnOito"
+            android:layout_alignBottom="@+id/btnOito"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:onClick="onClickNumber"
+            android:text="7"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnQuatro"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignBaseline="@+id/btnCinco"
+            android:layout_alignBottom="@+id/btnCinco"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onClickNumber"
+            android:text="4"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnUm"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnQuatro"
+            android:onClick="onClickNumber"
+            android:text="1"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnLimpa"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignBaseline="@+id/btnZero"
+            android:layout_alignBottom="@+id/btnZero"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onClickLimpa"
+            android:text="C"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:layout_toEndOf="@+id/linearLayout"
+        android:layout_below="@+id/etProceso"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/btnOito"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/etProceso"
+            android:layout_toEndOf="@+id/btnSete"
+            android:layout_toRightOf="@+id/btnSete"
+            android:onClick="onClickNumber"
+            android:text="8"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnCinco"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/btnOito"
+            android:layout_toEndOf="@+id/btnQuatro"
+            android:layout_toRightOf="@+id/btnQuatro"
+            android:onClick="onClickNumber"
+            android:text="5"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnDois"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/btnSeis"
+            android:layout_toEndOf="@+id/btnUm"
+            android:layout_toRightOf="@+id/btnUm"
+            android:onClick="onClickNumber"
+            android:text="2"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/btnUm"
+            android:layout_toLeftOf="@+id/btnIgual"
+            android:layout_toStartOf="@+id/btnIgual"
+            android:onClick="onClickNumber"
+            android:text="0"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
